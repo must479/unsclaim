@@ -39,3 +39,5 @@ cache
 
 .sandbox
 .deployer
+
+typechain-types

@@ -423,10 +423,10 @@ contract UNSRegistry is
         return super._msgData();
     }
 
-    function _beforeTokenTransfer(address from, address to, uint256 amount) internal override {
+    function _beforeTokenTransfer(address from, address to, uint256 tokenId) internal override {
         super._beforeTokenTransfer(from, to, amount);
 
-        if(_reverses[from] != 0) {
+        if(_reverses[from] == tokenId) {
             _removeReverse(from);
         }
     }
