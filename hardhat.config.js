@@ -15,6 +15,7 @@ const argv = require('yargs/yargs')()
   .boolean('enableContractSizer')
   .boolean('ci').argv;
 
+require('hardhat-contract-sizer');
 require('@openzeppelin/hardhat-upgrades');
 require('@nomiclabs/hardhat-waffle');
 require('@nomiclabs/hardhat-solhint');
